@@ -1,3 +1,7 @@
+######
+######   Swagger GET https://api.fifa.com/api/v1/live/football Jun 9th 2018
+######
+
 {
     "ContinuationToken": "eyJ0b2tlbiI6IitSSUQ6YVJNQkFJUnVvZ21VeUFBQUFBQUFBQT09I1JUOjEjVFJDOjUwIiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0=",
     "ContinuationHash": "457927053",
