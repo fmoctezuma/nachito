@@ -160,10 +160,11 @@ func main() {
 		log.Fatal(readErr)
 	}
 
-	var livescore LivescoreData
+	//var livescore LivescoreData
+	livescore := LivescoreData{}
 	json.Unmarshal([]byte(body), &livescore)
 	// Stadium request print example
-	fmt.Println("Stadium ", livescore.Stadium.Name)
+	fmt.Println("Stadium:", livescore.Stadium.Name[0].Description)
 
 	// Request status
 	fmt.Println(res.Status)
