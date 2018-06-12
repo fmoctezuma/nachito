@@ -9,7 +9,6 @@ import (
 	"time"
 )
 
-// Livescore API
 const (
 	livescoreapi = "https://api.fifa.com/api/v1/live/football/17/254645/275073/300331533?language=en-GB"
 )
@@ -166,7 +165,6 @@ func main() {
 	json.Unmarshal([]byte(body), &livescore)
 	// Stadium request print example
 	fmt.Println("Stadium:", livescore.Stadium.Name[0].Description)
-
 	// Request status
 	fmt.Println(res.Status)
 	// Body
