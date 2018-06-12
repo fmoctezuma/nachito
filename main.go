@@ -9,6 +9,7 @@ import (
 	"time"
 )
 
+// Livescore API
 const (
 	livescoreapi = "https://api.fifa.com/api/v1/live/football/17/254645/275073/300331533?language=en-GB"
 )
