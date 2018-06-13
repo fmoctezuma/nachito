@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	matchesapi = "https://api.fifa.com/api/v1/calendar/matches?idCompetition=17&idSeason=254645&idStage=275073&language=all"
+	matchesapi = "https://api.fifa.com/api/v1/calendar/matches?idCompetition=17&idSeason=254645&idStage=275073&language=en-GB"
 )
 
 type MatchesData struct {
@@ -161,11 +161,14 @@ func main() {
 	if readErr != nil {
 		log.Fatal(readErr)
 	}
-	//var matches MatchesData
-	matches := MatchesData{}
+	var matches MatchesData
+	//matches := MatchesData{}
 	json.Unmarshal([]byte(body), &matches)
 
-	fmt.Println("IDStage: ", matches.Results[1].GroupName.Description)
+	for i, match := range matches.Results[0].GroupName {
+		fmt.Println(i, match)
+	}
+	fmt.Println("Group Nme: ", matches.Results[1].GroupName[0].Description)
 	fmt.Println("IDMatch: ", matches.Results[4].IDMatch)
 
 }
